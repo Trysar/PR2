@@ -11,9 +11,10 @@ public class CoppiaInt{
 		occorrenze++;
 	}
 
-	public void decrementa() throws Exception{
-		if (occorrenze < 1) throw new Exception("non si dovrebbe fare");
-		else occorrenze--;
+	public int decrementa() throws Exception{
+		if (occorrenze <= 0)throw new Exception("era l'ultimo elemento");
+		occorrenze--;
+		return occorrenze;
 	}
 
 	public int getOccorrenze(){
